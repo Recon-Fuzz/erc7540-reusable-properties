@@ -1,6 +1,8 @@
 # ERC7540 Reusable Properties
 
-A collection of reusable properties or ERC7540 Vaults
+A collection of reusable properties or ERC7540 Vaults 
+
+Written in collaboration with [Centrifuge](https://centrifuge.io/)
 
 ## Specification (WIP)
 
