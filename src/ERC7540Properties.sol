@@ -316,5 +316,5 @@ abstract contract ERC7540Properties is Asserts {
         // NOTE: This code path is never hit per the above
     }
 
-    /// == END erc7540_9 == //
+    /// == END erc7540_7 == //
 }
