@@ -7,7 +7,7 @@ Written in collaboration with [Centrifuge](https://centrifuge.io/)
 ## Specification
 
 | Property | Description | Category |
-| --- | --- | --- | --- | --- |
+| --- | --- | --- |
 | 7540-1 | `convertToAssets(totalSupply) == totalAssets` unless price is 0.0 | High Level |
 | 7540-2 | `convertToShares(totalAssets) == totalSupply` unless price is 0.0 | High Level | 
 | 7540-3 | max* never reverts | DOS Invariant | 
