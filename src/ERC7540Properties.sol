@@ -101,6 +101,7 @@ abstract contract ERC7540Properties is Asserts {
     }
 
     /// == erc7540_4 == //
+    
     /// @dev 7540-4 claiming more than max always reverts
     function erc7540_4_deposit(address erc7540Target, uint256 amt) public virtual returns (bool) {
         // Skip 0
@@ -240,8 +241,8 @@ abstract contract ERC7540Properties is Asserts {
     }
 
     /// == erc7540_7 == //
-    /// @dev 7540-7 if max[method] > 0, then [method] (max) should not revert
 
+    /// @dev 7540-7 if max[method] > 0, then [method] (max) should not revert
     function erc7540_7_deposit(address erc7540Target, uint256 amt) public virtual returns (bool) {
         // Per erc7540_4
         uint256 maxDeposit = IERC7540Like(erc7540Target).maxDeposit(actor);
