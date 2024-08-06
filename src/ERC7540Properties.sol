@@ -3,7 +3,6 @@ pragma solidity 0.8.21;
 
 import {Asserts} from "@chimera/Asserts.sol";
 
-
 interface IShareLike {
     function balanceOf(address) external view returns (uint256);
     function totalSupply() external view returns (uint256);
@@ -39,10 +38,11 @@ interface IERC7540Like {
 ///     To get started, extend from this contract and make sure to add a way to set the actor (the current user)
 ///     For more info: https://getrecon.xyz/
 abstract contract ERC7540Properties is Asserts {
+    uint256 public constant MAX_ROUNDING_ERROR = 10 ** 18;
 
-    uint256 constant public MAX_ROUNDING_ERROR = 10 ** 18;
-    
-    address actor; /// @audit TODO: You must add a way to change this!
+    address actor;
+
+    /// @audit TODO: You must add a way to change this!
 
     /// @dev 7540-1	convertToAssets(totalSupply) == totalAssets unless price is 0.0
     function erc7540_1(address erc7540Target) public virtual returns (bool) {
@@ -101,7 +101,7 @@ abstract contract ERC7540Properties is Asserts {
     }
 
     /// == erc7540_4 == //
-    
+
     /// @dev 7540-4 claiming more than max always reverts
     function erc7540_4_deposit(address erc7540Target, uint256 amt) public virtual returns (bool) {
         // Skip 0
@@ -127,7 +127,7 @@ abstract contract ERC7540Properties is Asserts {
 
         // NOTE: This code path is never hit per the above
     }
-    
+
     function erc7540_4_mint(address erc7540Target, uint256 amt) public virtual returns (bool) {
         // Skip 0
         if (amt == 0) {
