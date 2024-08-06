@@ -1,6 +1,6 @@
 # ERC7540 Reusable Properties
 
-A collection of reusable properties or [ERC-7540](https://eips.ethereum.org/EIPS/eip-7540) Vaults 
+A collection of reusable properties for [ERC-7540](https://eips.ethereum.org/EIPS/eip-7540) Vaults 
 
 Written in collaboration with [Centrifuge](https://centrifuge.io/)
 
