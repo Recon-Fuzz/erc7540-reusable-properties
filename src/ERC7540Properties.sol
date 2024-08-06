@@ -34,16 +34,15 @@ interface IERC7540Like {
 }
 
 /// @dev ERC-7540 Properties
-
-/// Casted to ERC7540 -> Do the operation
-/// These are the re-usable ones, which do alter the state
-/// And we will not call
-
+/// @author The Recon Team
+/// @notice A set of reuseable tests for your ERC7540 Vaults
+///     To get started, extend from this contract and make sure to add a way to set the actor (the current user)
+///     For more info: https://getrecon.xyz/
 abstract contract ERC7540Properties is Asserts {
 
     uint256 constant public MAX_ROUNDING_ERROR = 10 ** 18;
     
-    address actor;// NOTE: You must add a way to change this!
+    address actor; /// @audit TODO: You must add a way to change this!
 
     /// @dev 7540-1	convertToAssets(totalSupply) == totalAssets unless price is 0.0
     function erc7540_1(address erc7540Target) public virtual returns (bool) {
