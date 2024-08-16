@@ -4,6 +4,12 @@ A collection of reusable properties for [ERC-7540](https://eips.ethereum.org/EIP
 
 Written in collaboration with [Centrifuge](https://centrifuge.io/)
 
+## Quickstart
+
+```
+forge install Recon-Fuzz/erc7540-reusable-properties --no-commit
+```
+
 ## Specification
 
 | Property | Description | Category |
