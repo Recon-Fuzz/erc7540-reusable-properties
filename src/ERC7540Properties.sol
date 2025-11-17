@@ -75,7 +75,7 @@ abstract contract ERC7540Properties is Asserts {
 
     address actor;
 
-    /// @audit TODO: You must add a way to change this!
+    /// @custom:audit TODO: You must add a way to change this!
 
     /// @dev 7540-1	convertToAssets(totalSupply) == totalAssets unless price is 0.0
     function erc7540_1(address erc7540Target) public virtual returns (bool) {
@@ -147,7 +147,7 @@ abstract contract ERC7540Properties is Asserts {
 
         uint256 maxDep = IERC7540Like(erc7540Target).maxDeposit(actor);
 
-        /// @audit No Revert is proven by erc7540_5
+        /// @custom:audit No Revert is proven by erc7540_5
 
         uint256 sum = maxDep + amt;
         if (sum == 0) {
