@@ -1,3 +1,5 @@
+[![Audited by Recon](https://getrecon.xyz/api/badge?type=audited)](https://getrecon.xyz)
+
 # ERC7540 Reusable Properties
 
 A collection of reusable properties for [ERC-7540](https://eips.ethereum.org/EIPS/eip-7540) Vaults 
